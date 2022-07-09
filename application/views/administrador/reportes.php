@@ -154,6 +154,7 @@
         </div>
         <br>
         <input type="submit" class="btn btn-primary btn-sm" value="Generar">
+        <input type="submit" class="btn btn-success btn-sm" value="Excel">
         </form>
       </div>
     </div>
@@ -172,7 +173,8 @@
           </div>
         </div>
         <br>
-        <input type="submit" class="btn btn-primary btn-sm" value="Generar">
+        <input  type="submit" class="btn btn-primary btn-sm" value="Generar">
+        <button  class="btn btn-success btn-sm">Excel</button>
        </div>  
      </form>
     </div>

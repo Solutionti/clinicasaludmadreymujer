@@ -52,4 +52,17 @@ class Reportes extends Admin_Controller {
 		$data = ["laboratorio" => $laboratorios, "total" => $totales];
 		$this->load->view('administrador/pdfreportelaboratorio', $data);
 	}
+
+	//REPORTES EN EXCEL
+
+	public function excelLabotario() {
+		$this->load->library("Exportexcel");
+		$this->input->post("");
+		$files = "laboratorio.xlsx";
+        $name = "Laboratorio";
+		$data = $this->Reportes_model->excelLabotario($fecha1);
+		$this->Exportexcel = new ExportExcel();
+        $this->Exportexcel->excel_generico($data,$files, $name);
+        redirect(base_url("administracion/reportes"));
+	}
 }
